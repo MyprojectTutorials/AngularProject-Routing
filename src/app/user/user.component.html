@@ -1,0 +1,90 @@
+<!-- <p>FromUser</p> -->
+
+<!-- bhrjhj -->
+<div class="row">
+    <div class="col-6 mt-4 p-4">
+      <table class="table table-dark table-striped">
+        <thead>
+          <tr>
+            <th scope="col">FirstName</th>
+            <th scope="col">LastName</th>
+            <th scope="col">email</th>
+            <th scope="col">contact</th>
+            <!-- <th scope="col"><button type="button" class="btn btn-primary" (click)="on()">{{AddMore?"AddMore":"Addless"}}</button></th> -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of listData">
+            <td>  {{user.firstName}}   </td>
+            <td>   {{user.lastName}}</td>
+            <td>   {{user.email}}</td>
+            <td>   {{user.contact}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- hjggjjg -->
+    <div class="col-6 mt-4 p-4 card w-0">
+      <form [formGroup]="userForm">
+        <div class="mt-5 box">
+            <div class="form-row">
+                <div class="col-md-12">
+                    <div class="form-group mt-4">
+                        <label>firstName</label>
+                    </div>
+                    &nbsp;
+                    <div class="form-row" style="margin-top: -10px;">
+                        <div class="col">
+                            <input type="text" formControlName="firstName" class="form-control" placeholder="firstName">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group mt-4">
+                        <label>lastName</label>
+                    </div>&nbsp;
+                    <div class="form-row" style="margin-top: -10px;">
+                        <div class="col">
+                            <input type="text" formControlName="lastName" class="form-control" placeholder="lastName">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group mt-4">
+                        <label>Email</label>
+                    </div>&nbsp;
+                    <div class="form-row" style="margin-top: -10px;">
+                        <div class="col">
+                            <input type="email" formControlName="email" class="form-control" placeholder="Email">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group mt-4">
+                      <label>contact</label>
+                  </div>&nbsp;
+                  <div class="form-row" style="margin-top: -10px;">
+                      <div class="col">
+                          <input type="number" formControlName="contact" class="form-control" placeholder="contact">
+                      </div>
+                  </div>
+              </div>
+                <div class="form-row mt-4">
+                    <div class="col-md-6">
+                        <button class="btn btn-primary" (click)="addItem(userForm.value)">Submit</button>&nbsp;
+                        <button class="btn btn-primary" (click)="reset()">Reset</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+
+    </div>
+</div>
+
+
+
+
+
